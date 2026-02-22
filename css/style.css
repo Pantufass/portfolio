@@ -1153,3 +1153,214 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-light);
     margin-top: 0.3rem;
 }
+/* Game Jams Timeline - Auto Height, No Scroll - WIDER IMAGES */
+.gamejams {
+    padding: 100px 0;
+    background: var(--light-color);
+}
+
+.timeline {
+    max-width: 1000px;
+    margin: 3rem auto 0;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.timeline-date {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 700;
+    z-index: 3;
+    box-shadow: 0 4px 10px rgba(108, 92, 231, 0.3);
+    border: 2px solid white;
+}
+
+.timeline-card {
+    display: flex;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    width: calc(100% - 4rem);
+    margin: 0 auto;
+    position: relative;
+    top: 1.5rem;
+    transition: var(--transition);
+    min-height: 250px;
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(108, 92, 231, 0.2);
+}
+
+.timeline-card.reverse {
+    flex-direction: row-reverse;
+}
+
+
+.timeline-image {
+    flex: 0 0 420px; 
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+}
+
+.timeline-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.timeline-card:hover .timeline-image img {
+    transform: scale(1.1);
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(108, 92, 231, 0.9), transparent);
+    color: white;
+    padding: 1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.timeline-card:hover .image-overlay {
+    transform: translateY(0);
+}
+
+.image-overlay span {
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: block;
+    text-align: center;
+}
+
+.timeline-content {
+    flex: 1;
+    padding: 1.8rem;
+}
+
+.timeline-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.3rem;
+    font-size: 1.5rem;
+}
+
+.timeline-title {
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 0.8rem;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.timeline-content p {
+    color: var(--text-light);
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    text-align: justify;
+}
+
+.timeline-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.timeline-tags span {
+    background: var(--light-color);
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--dark-color);
+}
+
+.timeline-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transition);
+    padding: 0.5rem 0;
+}
+
+.timeline-link:hover {
+    color: var(--secondary-color);
+    transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-date {
+        left: 30px;
+        transform: translateX(0);
+        font-size: 0.9rem;
+        padding: 0.3rem 1rem;
+    }
+    
+    .timeline-card {
+        flex-direction: column !important;
+        width: calc(100% - 60px);
+        margin-left: 60px;
+        min-height: auto;
+    }
+    
+    /* Images full width on mobile */
+    .timeline-image {
+        flex: 0 0 200px;
+        width: 100%;
+    }
+    
+    .timeline-content {
+        padding: 1.5rem;
+    }
+    
+    .image-overlay {
+        transform: translateY(0);
+        background: linear-gradient(to top, rgba(108, 92, 231, 0.8), transparent);
+    }
+}
+
+/* For even larger screens, you can make images even wider */
+@media (min-width: 1200px) {
+    .timeline-image {
+        flex: 0 0 460px; /* Even wider on large screens */
+    }
+}

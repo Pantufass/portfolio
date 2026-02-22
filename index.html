@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
@@ -34,22 +37,21 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="glitch-text">Filipe Silveira</h1>
-            <p class="hero-title">Game Designer & Developer</p>
-            <p class="hero-tagline">Crafting interactive experiences that tell stories and spark imagination</p>
-            <div class="hero-buttons">
-                <a href="#featured" class="btn btn-primary">View My Work</a>
-                <a href="#about" class="btn btn-secondary">About Me</a>
-            </div>
+   <!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1 style="font-family: 'Bebas Neue', cursive; font-size: 7rem; letter-spacing: 4px; line-height: 1; margin: 0; text-transform: uppercase; text-shadow: 4px 4px 0 #6c5ce7;">
+            Filipe Silveira
+        </h1>
+        <p style="font-family: 'Bebas Neue', cursive; font-size: 2rem; letter-spacing: 2px; margin-top: 0.5rem; opacity: 0.9;">
+            Game Designer & Developer
+        </p>
+        <div class="hero-buttons">
+            <a href="#featured" class="btn btn-primary">View My Work</a>
+            <a href="#about" class="btn btn-secondary">About Me</a>
         </div>
-        <div class="hero-scroll">
-            <span>Scroll Down</span>
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </section>
+    </div>
+</section>
 
     <!-- Featured Work Section -->
     <section id="featured" class="featured">
@@ -305,55 +307,57 @@
     </section>
 
     <!-- Master's Thesis Section -->
-    <section id="thesis" class="thesis">
-        <div class="container">
-            <h2 class="section-title">Master's Thesis</h2>
-            <p class="section-subtitle">"Procedural Narrative Generation in Open World Games"</p>
+<section id="thesis" class="thesis">
+    <div class="container">
+        <h2 class="section-title">Master's Thesis</h2>
+        <p class="section-subtitle">CiF-Bannerlord: A Social Artificial Intelligence System for Mount & Blade II: Bannerlord</p>
+        
+        <div class="thesis-container">
+            <div class="thesis-abstract" style="text-align: justify;">
+                <h3>Overview</h3>
+                <p>
+From January to November 2021, I developed my Master's thesis—a mod bringing social AI to Mount & Blade II: Bannerlord. Working without source code access, I decompiled the game using dnspy and built the modification in C# with Visual Studio. It was a staggering challenge: millions of lines of decompiled code with zero comments, and my first time modding a commercial game.
+                </p>
+                <p>
+The solution extends Comme il Faut (CiF) , a social architecture first implemented in Prom Week. CiF gives NPCs desires, traits, statuses, and relationships—empowering them to pursue individual goals and interact independently from the player. In Bannerlord, this means characters now walk around, talk with each other, and even initiate dialogue with the player. NPCs were equipped with more dialog options conveying different intents—positive, negative, or romantic—transforming the base game's static social scenes into immersive, dynamic environments.
+                </p>
+                <p>
+CiF-Bannerlord aimed to study how an active social environment impacts player immersion and NPC believability in a AAA game. Testing was conducted through a NexusMods release and controlled user tests. Results showed a significant positive impact on the game's social experience.
+                </p>
+                
+                <div class="thesis-highlights">
+                    <div class="highlight">
+                        <i class="fas fa-file-pdf"></i>
+                        <a href="files/thesis.pdf">Read Full Thesis (PDF)</a>
+                    </div>
+                    <div class="highlight">
+                        <i class="fas fa-download"></i>
+                        <a href="https://www.nexusmods.com/mountandblade2bannerlord/mods/3272?tab=description">NexusMods Page</a>
+                    </div>
+                </div>
+            </div>
             
-            <div class="thesis-container">
-                <div class="thesis-abstract">
-                    <h3>Abstract</h3>
-                    <p>This research explores how procedural generation can create meaningful narratives in open world games without sacrificing player agency. Through the development of a prototype game, "Tales of the Shifting Isles," I demonstrate a system that generates quests, character dialogues, and world events based on player actions and choices.</p>
+            <div class="thesis-media">
+                <h3>Development Gallery</h3>
+                <div class="thesis-image-grid">
+                    <div class="thesis-image-card" style="max-width: 380px;">
+                        <img src="images/thesis/conversation.jpg" alt="NPC Conversation System" style="width: 100%; max-width: 380px; height: auto;">
+                        <div class="image-caption">
+                            <p>NPC conversation system - Characters now interact autonomously</p>
+                        </div>
+                    </div>
                     
-                    <div class="thesis-highlights">
-                        <div class="highlight">
-                            <i class="fas fa-file-pdf"></i>
-                            <a href="#">Read Full Thesis (PDF)</a>
-                        </div>
-                        <div class="highlight">
-                            <i class="fas fa-code"></i>
-                            <a href="#">View Research Code</a>
-                        </div>
-                        <div class="highlight">
-                            <i class="fas fa-video"></i>
-                            <a href="#">Thesis Presentation</a>
+                    <div class="thesis-image-card" style="max-width: 380px;">
+                        <img src="images/thesis/TavernNoise.png" alt="Tavern Social Scene" style="width: 100%; max-width: 380px; height: auto;">
+                        <div class="image-caption">
+                            <p>Tavern social scene - Dynamic NPC gatherings and interactions</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="thesis-prototype">
-                    <h3>Prototype: Tales of the Shifting Isles</h3>
-                    <img src="images/thesis/prototype.jpg" alt="Thesis Prototype">
-                    <p>A playable prototype developed to test the narrative generation system. Features procedurally generated quests that adapt to player choices.</p>
-                    <a href="#" class="btn">Play Prototype</a>
-                </div>
-                
-                <div class="thesis-publications">
-                    <h3>Related Publications</h3>
-                    <ul>
-                        <li>
-                            <i class="fas fa-file-alt"></i>
-                            "Dynamic Narrative Generation in Open Worlds" - DiGRA 2024
-                        </li>
-                        <li>
-                            <i class="fas fa-file-alt"></i>
-                            "Player Agency in Procedural Stories" - Game Developers Conference 2024
-                        </li>
-                    </ul>
-                </div>
-            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- About Me Section -->
     <section id="about" class="about">
@@ -365,60 +369,49 @@
                     <img src="images/profile/filipe-silveira.jpg" alt="Filipe Silveira">
                 </div>
                 
-                <div class="about-content">
+                <div class="about-content" style="text-align: justify;">
                     <h3>Filipe Silveira</h3>
                     <p class="about-title">Game Designer & Developer</p>
                     
-                    <p class="about-bio">I'm a game designer passionate about creating experiences that blend meaningful narratives with innovative mechanics. With a Master's degree in Game Design and 5+ years of experience, I've worked on projects ranging from small experimental prototypes to larger narrative-driven games.</p>
-                    
-                    <p class="about-bio">My approach to game design focuses on player agency and emergent storytelling. I believe the best games are those where players feel their choices truly matter, creating unique stories they'll want to share.</p>
-                    
+                    <p class="about-bio">
+I'm currently studying Game Design at Uppsala University's Campus Gotland, pursuing a Master's Degree to deepen my design skills and experience. Most importantly, I'm here to network with people from the games industry and connect with peers who share my passion for different areas of game design.
+                    </p>
+                    <p class="about-bio">
+Before diving into game design, I worked as a software developer which has allowed me to learn and grow professionally in order to understand the development process of software projects. But now I'm following my passion toward developing games I'm genuinely excited about.
+                    </p>
+                    <p class="about-bio">
+I've always been a gamer, but after gaining experience in software development, I found a new enjoyment in analyzing gameplay features and design choices in games, how would I do it or what would I change, something I hadn't thought much about before. That said, I still love playing games purely for fun, especially with friends. I find gaming is a great tool for socializing and staying connected.
+                    </p>
+                    <p class="about-bio">
+I have various hobbies and interests, all of them very unique, such as gaming, traveling, cooking and exercise. I've been hitting the gym regularly and running occasionally (when it's not too cold). I used to go climbing, though I find I get bored if I go too often. During my teen years, I was a competitive swimmer, even though I wasn't the best, it shaped a good part of my formative years, and I'm grateful for all the challenges I pushed through and I am excited to train still (especially if I have company).
+                    </p>
                     <div class="about-skills">
-                        <h4>Skills & Expertise</h4>
                         <div class="skills-grid">
                             <div class="skill-category">
-                                <h5>Design</h5>
+                                <h5>Favorite Games</h5>
                                 <ul>
-                                    <li>Level Design</li>
-                                    <li>Systems Design</li>
-                                    <li>Narrative Design</li>
-                                    <li>Game Balancing</li>
+                                    <li>Warframe</li>
+                                    <li>Total War</li>
+                                    <li>Pokemon</li>
+                                    <li>Roguelikes (in general)</li>
                                 </ul>
                             </div>
-                            <div class="skill-category">
-                                <h5>Development</h5>
-                                <ul>
-                                    <li>Unity (C#)</li>
-                                    <li>Unreal (Blueprints)</li>
-                                    <li>Godot (GDScript)</li>
-                                    <li>Prototyping</li>
-                                </ul>
-                            </div>
-                            <div class="skill-category">
-                                <h5>Tools</h5>
-                                <ul>
-                                    <li>Git / Perforce</li>
-                                    <li>Blender</li>
-                                    <li>Figma</li>
-                                    <li>Trello / Jira</li>
-                                </ul>
-                            </div>
+                            
                         </div>
                     </div>
                     
                     <div class="about-contact">
-                        <h4>Let's Connect</h4>
+                        <h4>My socials</h4>
                         <div class="contact-links">
-                            <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                            <a href="#"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#"><i class="fab fa-itch-io"></i> itch.io</a>
-                            <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
-                            <a href="#"><i class="fas fa-envelope"></i> Email</a>
+                            <a href="https://www.linkedin.com/in/filipe-silveira-51b182174/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                            <a href="https://github.com/Pantufass"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://itch.io/profile/pantufass"><i class="fab fa-itch-io"></i> itch.io</a>
+                            <a href="flipslv98@gmail.com"><i class="fas fa-envelope"></i> Email</a>
                         </div>
                     </div>
                     
                     <div class="about-cv">
-                        <a href="#" class="btn"><i class="fas fa-download"></i> Download CV</a>
+                        <a href="Filipe_Silveira_CV.pdf" class="btn"><i class="fas fa-download"></i> Download CV</a>
                     </div>
                 </div>
             </div>
@@ -429,12 +422,11 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2024 Filipe Silveira. All rights reserved.</p>
+                <p>&copy; 2026 Filipe Silveira. All rights reserved.</p>
                 <div class="footer-links">
                     <a href="#home">Home</a>
                     <a href="#featured">Work</a>
                     <a href="#about">About</a>
-                    <a href="#">Privacy</a>
                 </div>
             </div>
         </div>

@@ -219,6 +219,127 @@ window.addEventListener('hashchange', () => {
     }
 });
 
+// Image Carousel for Thesis
+class ImageCarousel {
+    constructor(carouselElement) {
+        this.carousel = carouselElement;
+        this.images = this.carousel.querySelectorAll('.carousel-image');
+        this.dots = this.carousel.querySelectorAll('.dot');
+        this.prevBtn = this.carousel.querySelector('.prev-btn');
+        this.nextBtn = this.carousel.querySelector('.next-btn');
+        this.caption = this.carousel.closest('.thesis-media').querySelector('.caption-text');
+        this.currentIndex = 0;
+        this.totalImages = this.images.length;
+        
+        // Captions for each image
+        this.captions = [
+            "NPC conversation system - Characters now interact autonomously",
+            "Tavern social scene - Dynamic NPC gatherings and interactions",
+            "Extended dialog options with emotional intent (positive, negative, romantic)",
+            "Relationship tracking system between NPCs",
+            "Working with 1.5M+ lines of decompiled game code"
+        ];
+        
+        this.init();
+    }
+    
+    init() {
+        this.updateCarousel();
+        this.setupEventListeners();
+        this.startAutoPlay();
+    }
+    
+    setupEventListeners() {
+        this.prevBtn.addEventListener('click', () => this.prevImage());
+        this.nextBtn.addEventListener('click', () => this.nextImage());
+        
+        this.dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => this.goToImage(index));
+        });
+        
+        // Pause autoplay on hover
+        this.carousel.addEventListener('mouseenter', () => this.stopAutoPlay());
+        this.carousel.addEventListener('mouseleave', () => this.startAutoPlay());
+    }
+    
+    updateCarousel() {
+        // Update images
+        this.images.forEach((img, index) => {
+            img.classList.toggle('active', index === this.currentIndex);
+        });
+        
+        // Update dots
+        this.dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === this.currentIndex);
+        });
+        
+        // Update caption
+        if (this.caption) {
+            this.caption.textContent = this.captions[this.currentIndex];
+        }
+        
+        // Update button states
+        this.prevBtn.disabled = this.currentIndex === 0;
+        this.nextBtn.disabled = this.currentIndex === this.totalImages - 1;
+    }
+    
+    nextImage() {
+        if (this.currentIndex < this.totalImages - 1) {
+            this.currentIndex++;
+            this.updateCarousel();
+        }
+    }
+    
+    prevImage() {
+        if (this.currentIndex > 0) {
+            this.currentIndex--;
+            this.updateCarousel();
+        }
+    }
+    
+    goToImage(index) {
+        if (index >= 0 && index < this.totalImages) {
+            this.currentIndex = index;
+            this.updateCarousel();
+        }
+    }
+    
+    startAutoPlay() {
+        this.autoPlayInterval = setInterval(() => {
+            if (this.currentIndex < this.totalImages - 1) {
+                this.nextImage();
+            } else {
+                this.goToImage(0);
+            }
+        }, 5000);
+    }
+    
+    stopAutoPlay() {
+        if (this.autoPlayInterval) {
+            clearInterval(this.autoPlayInterval);
+        }
+    }
+}
+
+// Initialize carousel when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.querySelector('.image-carousel');
+    if (carousel) {
+        new ImageCarousel(carousel);
+    }
+});
+
+// Keyboard navigation for carousel
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+        const prevBtn = document.querySelector('.prev-btn');
+        if (prevBtn && !prevBtn.disabled) prevBtn.click();
+    } else if (e.key === 'ArrowRight') {
+        const nextBtn = document.querySelector('.next-btn');
+        if (nextBtn && !nextBtn.disabled) nextBtn.click();
+    }
+});
+
 // Console greeting (for fun)
 console.log('%c👋 Welcome to Filipe Silveira\'s Game Design Portfolio!', 'font-size: 16px; color: #6c5ce7; font-weight: bold;');
 console.log('%c🎮 Explore my games and prototypes!', 'font-size: 14px; color: #00b894;');

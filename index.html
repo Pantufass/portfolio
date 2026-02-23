@@ -21,9 +21,9 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#featured">Featured</a></li>
                 <li><a href="#games">Games</a></li>
                 <li><a href="#prototypes">Prototypes</a></li>
+                <li><a href="#work-in-progress">Work in Progress</a></li>
                 <li><a href="#boardgames">Board Games</a></li>
                 <li><a href="#gamejams">Game Jams</a></li>
                 <li><a href="#thesis">Thesis</a></li>
@@ -47,66 +47,16 @@
             Game Designer & Developer
         </p>
         <div class="hero-buttons">
-            <a href="#featured" class="btn btn-primary">View My Work</a>
+            <a href="#work-in-progress" class="btn btn-primary">View My Work</a>
             <a href="#about" class="btn btn-secondary">About Me</a>
         </div>
     </div>
 </section>
 
-    <!-- Featured Work Section -->
-    <section id="featured" class="featured">
-        <div class="container">
-            <h2 class="section-title">Featured Work</h2>
-            <p class="section-subtitle">My best projects that showcase my skills and creativity</p>
-            <div class="featured-grid">
-                <div class="featured-card">
-                    <div class="featured-image">
-                        <img src="images/projects/featured1.jpg" alt="Project 1">
-                        <div class="featured-overlay">
-                            <h3>Echoes of Tomorrow</h3>
-                            <p>Narrative-driven adventure game</p>
-                            <div class="featured-awards">
-                                <span><i class="fas fa-trophy"></i> Best Narrative - IndieCade 2024</span>
-                            </div>
-                            <a href="#" class="btn-small">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="featured-card">
-                    <div class="featured-image">
-                        <img src="images/projects/featured2.jpg" alt="Project 2">
-                        <div class="featured-overlay">
-                            <h3>Quantum Chess</h3>
-                            <p>Multiplayer strategy game</p>
-                            <div class="featured-awards">
-                                <span><i class="fas fa-trophy"></i> Innovation Award - GDC 2024</span>
-                            </div>
-                            <a href="#" class="btn-small">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="featured-card">
-                    <div class="featured-image">
-                        <img src="images/projects/featured3.jpg" alt="Project 3">
-                        <div class="featured-overlay">
-                            <h3>Forest Whisperers</h3>
-                            <p>Environmental puzzle game</p>
-                            <div class="featured-awards">
-                                <span><i class="fas fa-trophy"></i> People's Choice - Global Game Jam</span>
-                            </div>
-                            <a href="#" class="btn-small">View Project</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Game Development Section -->
     <section id="games" class="games">
         <div class="container">
             <h2 class="section-title">Game Development</h2>
-            <p class="section-subtitle">Completed and in-development digital games</p>
             
             <div class="filter-buttons">
                 <button class="filter-btn active" data-filter="all">All</button>
@@ -136,91 +86,133 @@
                     </div>
                 </div>
 
-                <!-- Unreal Project -->
-                <div class="project-card" data-category="unreal">
-                    <img src="images/projects/quantum-chess.jpg" alt="Quantum Chess">
-                    <div class="project-info">
-                        <h3>Quantum Chess</h3>
-                        <p>A strategic multiplayer game where pieces exist in superposition. Real-time strategy meets quantum mechanics.</p>
-                        <div class="project-tags">
-                            <span>Unreal 5</span>
-                            <span>Blueprints</span>
-                            <span>Multiplayer</span>
-                            <span>Strategy</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" target="_blank"><i class="fab fa-steam"></i> Steam</a>
-                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </div>
                 </div>
+            </div>
+    </section>
 
-                <!-- Godot Project -->
-                <div class="project-card" data-category="godot">
-                    <img src="images/projects/forest-whisperers.jpg" alt="Forest Whisperers">
-                    <div class="project-info">
-                        <h3>Forest Whisperers</h3>
-                        <p>An environmental puzzle game about communicating with nature. Restore a magical forest by solving nature-based puzzles.</p>
-                        <div class="project-tags">
-                            <span>Godot</span>
-                            <span>GDScript</span>
-                            <span>2D</span>
-                            <span>Puzzle</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" target="_blank"><i class="fab fa-itch-io"></i> Play</a>
-                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
-                        </div>
+    <!-- Game Prototypes Section - Vertical Layout -->
+<section id="prototypes" class="prototypes">
+    <div class="container">
+        <h2 class="section-title">Game Prototypes</h2>
+        <p class="section-subtitle">Quick experiments and mechanic tests</p>
+        
+        <div class="prototypes-vertical">
+            <!-- Prototype 1 - Game Engine -->
+            <div class="prototype-card">
+                <div class="prototype-media">
+                    <video loop muted playsinline id="video-engine">
+                        <source src="images/prototypes/avt.mp4" type="video/mp4">
+                    </video>
+                    <div class="prototype-play-btn" onclick="openVideoPopup('images/prototypes/avt.mp4', 'Game Engine Prototype')"><i class="fas fa-play"></i></div>
+                </div>
+                <div class="prototype-content">
+                    <h3>Game Engine</h3>
+                    <p>
+            In Computer Graphics, I developed from scratch a game engine using C++ and OpenGL.
+                    </p>
+                    <p>
+            In this project I learned the basics of a game engine and the various steps of the rendering pipeline. It was fairly difficult to change from algebra on paper into code, but it was a very rewarding when it finally worked. 
+                    </p>
+                    <p>
+            The video showcase is a group project where me and my colleagues worked on several parts of the engine such as the physics, camera, movement controls and animations.
+                    </p>
+                    <div class="prototype-meta">
+                        <span><i class="fas fa-code"></i> C++ / OpenGL</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Game Prototypes Section -->
-    <section id="prototypes" class="prototypes">
-        <div class="container">
-            <h2 class="section-title">Game Prototypes</h2>
-            <p class="section-subtitle">Quick experiments and mechanic tests</p>
             
-            <div class="prototypes-grid">
-                <div class="prototype-card">
-                    <div class="prototype-media">
-                        <video loop muted playsinline>
-                            <source src="images/prototypes/gravity-shift.mp4" type="video/mp4">
-                        </video>
-                        <div class="prototype-play-btn"><i class="fas fa-play"></i></div>
-                    </div>
-                    <div class="prototype-content">
-                        <h3>Gravity Shift</h3>
-                        <p>A 2-week prototype exploring gravity manipulation mechanics. Players can flip gravity to navigate levels.</p>
-                        <div class="prototype-meta">
-                            <span><i class="far fa-calendar"></i> 2 weeks</span>
-                            <span><i class="fas fa-code"></i> Unity</span>
-                        </div>
-                        <a href="#" class="prototype-link">Try Prototype <i class="fas fa-arrow-right"></i></a>
-                    </div>
+            <!-- Prototype 2 - VR Game -->
+            <div class="prototype-card">
+                <div class="prototype-media">
+                    <video loop muted playsinline id="video-vr">
+                        <source src="images/prototypes/vr.mp4" type="video/mp4">
+                    </video>
+                    <div class="prototype-play-btn" onclick="openVideoPopup('images/prototypes/vr.mp4', 'VR Game Prototype')"><i class="fas fa-play"></i></div>
                 </div>
-
-                <div class="prototype-card">
-                    <div class="prototype-media">
-                        <video loop muted playsinline>
-                            <source src="images/prototypes/time-dilation.mp4" type="video/mp4">
-                        </video>
+                <div class="prototype-content">
+                    <h3>VR Game</h3>
+                    <p>
+            In the Virtual Reality course, me and my colleagues developed a Virtual Reality application, that explored the connection in a virtual environment between two mediums of interaction. This project was published as a scientific article with the title <a href="#" target="_blank" class="article-link">"Exploring Bi-Directional Pinpointing Techniques for Cross-Reality Collaboration"</a>.
+                    </p>
+                    <p>
+            This application functions as a puzzle-like game where two users, one in a VR headset and another in a tablet, have to interact with each other in order to progress each room.
+                    </p>
+                    <div class="prototype-meta">
+                        <span><i class="fas fa-code"></i> Unity</span>
                     </div>
-                    <div class="prototype-content">
-                        <h3>Time Dilation</h3>
-                        <p>Prototype testing slow-motion mechanics in a top-down shooter. Features bullet-time and time rewind.</p>
-                        <div class="prototype-meta">
-                            <span><i class="far fa-calendar"></i> 1 week</span>
-                            <span><i class="fas fa-code"></i> Unreal</span>
-                        </div>
-                        <a href="#" class="prototype-link">Try Prototype <i class="fas fa-arrow-right"></i></a>
-                    </div>
+                    <a href="https://ieeexplore.ieee.org/abstract/document/9419115" class="prototype-link">Read Article <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+
+    <!-- Work in Progress Section -->
+<section id="work-in-progress" class="work-in-progress">
+    <div class="container">
+        <h2 class="section-title">Work in Progress</h2>
+        <p class="section-subtitle">Passion projects I'm currently developing</p>
+        
+        <div class="wip-grid">
+            <!-- WIP Card 1 - Game Design Document -->
+            <div class="wip-card">
+                
+                <div class="wip-content">
+                    <h3>Text Corp</h3>
+                    <p class="wip-description">
+A narrative-driven uncanny game set on an office space. Players are tasked to write words every so often in order to
+continue employed (and not lose). By faster and efficient typing the player then has space to explore the bizzare area 
+and experience the story.
+                    <div class="wip-details">   
+                        <span><i class="fas fa-tag"></i> Narrative, Puzzle</span>
+                    </div>
+                    <a href="#" onclick="openGDDPopup('https://docs.google.com/document/d/e/2PACX-1vSyzMMYta9v8gfE7-k_IRzCF7PK3YD5qsEtArebSbbsjv9L2GH_xrDat5Z_QKtPYLRBNmv-SMgFSswP/pub?embedded=true', 'Text Corp'); return false;" class="wip-link">
+                        <i class="fas fa-eye"></i> Preview GDD
+                    </a>
+                </div>
+            </div>
+            
+            <!-- WIP Card 2 - Game Design Document -->
+            <div class="wip-card">
+               
+                <div class="wip-content">
+                    <h3>Dungeon Manager</h3>
+                    <p class="wip-description">
+A browser/mobile game where the player takes a management role in a fantasy scenario. They control parties of adventurers, 
+their equipment and strategies, to later watch how the parties (controlled by AI) performed in their missions.
+                    </p>
+                    <div class="wip-details">
+                        <span><i class="fas fa-tag"></i> Management, Fantasy, Mobile</span>
+                    </div>
+                    <a href="#" onclick="openGDDPopup('https://docs.google.com/document/d/e/2PACX-1vSJJZVqtuF0itc8dAEoH0PqQ2B5aSlZyaxZyqQbypRRMzHbyulf8-M4_BfiZRMdrZa1gwowdeer_cAn/pub?embedded=true', 'Dungeon Manager'); return false;" class="wip-link">
+                        <i class="fas fa-eye"></i> Preview GDD
+                    </a>
+                </div>
+            </div>
+            
+            <!-- WIP Card 3 - Game Design Document -->
+            <div class="wip-card">
+                
+                <div class="wip-content">
+                    <h3>Veldonix</h3>
+                    <p class="wip-description">
+A RPG creature collection game with a focus on two important aspects: competitive battles and evolution progress. The player needs 
+to seek ways to evolve their creatures instead of happening organically, and they have a high degree of customization with forking
+evolution paths and mastering actions.
+                    </p>
+                    <div class="wip-details">
+                        <span><i class="fas fa-tag"></i> Creature collection, Turn based, RPG</span>
+                    </div>
+                    <a href="#" onclick="openGDDPopup('https://docs.google.com/document/d/e/2PACX-1vTEmyO--HBQ8bK0yCYGunjvQgBl1h2P93TrRbm0GdAl1oJY1Lhgwt8DUhLwuiDSpWRgULMdt3tZpt9x/pub?embedded=true', 'Veldonix'); return false;" class="wip-link">
+                        <i class="fas fa-eye"></i> Preview GDD
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Board Game Prototypes Section -->
     <section id="boardgames" class="boardgames">
@@ -379,17 +371,16 @@ CiF-Bannerlord aimed to study how an active social environment impacts player im
             </div>
             
             <div class="thesis-media">
-                <h3>Development Gallery</h3>
                 <div class="thesis-image-grid">
-                    <div class="thesis-image-card" style="max-width: 380px;">
-                        <img src="images/thesis/conversation.jpg" alt="NPC Conversation System" style="width: 100%; max-width: 380px; height: auto;">
+                    <div class="thesis-image-card" style="max-width: 720px;">
+                        <img src="images/thesis/conversation.jpg" alt="NPC Conversation System" style="width: 100%; max-width: 720px; height: auto;">
                         <div class="image-caption">
                             <p>NPC conversation system - Characters now interact autonomously</p>
                         </div>
                     </div>
                     
-                    <div class="thesis-image-card" style="max-width: 380px;">
-                        <img src="images/thesis/TavernNoise.png" alt="Tavern Social Scene" style="width: 100%; max-width: 380px; height: auto;">
+                    <div class="thesis-image-card" style="max-width: 720px;">
+                        <img src="images/thesis/TavernNoise.png" alt="Tavern Social Scene" style="width: 100%; max-width: 720px; height: auto;">
                         <div class="image-caption">
                             <p>Tavern social scene - Dynamic NPC gatherings and interactions</p>
                         </div>
@@ -459,6 +450,35 @@ I have various hobbies and interests, all of them very unique, such as gaming, t
         </div>
     </section>
 
+    
+<!-- GDD Popup Modal -->
+<div id="gddPopup" class="popup-modal">
+    <div class="popup-content">
+        <div class="popup-header">
+            <h3 id="popupTitle">GDD Preview</h3>
+            <span class="popup-close" onclick="closeGDDPopup()">&times;</span>
+        </div>
+        <div class="popup-body">
+            <iframe id="gddFrame" src="" width="100%" height="100%" frameborder="0"></iframe>
+        </div>
+    </div>
+</div>
+
+<!-- Video Popup Modal -->
+<div id="videoPopup" class="popup-modal">
+    <div class="popup-content video-popup-content">
+        <div class="popup-header">
+            <h3 id="videoPopupTitle">Video Preview</h3>
+            <span class="popup-close" onclick="closeVideoPopup()">&times;</span>
+        </div>
+        <div class="popup-body video-popup-body">
+            <video id="popupVideo" controls autoplay>
+                <source src="" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -466,7 +486,7 @@ I have various hobbies and interests, all of them very unique, such as gaming, t
                 <p>&copy; 2026 Filipe Silveira. All rights reserved.</p>
                 <div class="footer-links">
                     <a href="#home">Home</a>
-                    <a href="#featured">Work</a>
+                    <a href="#work-in-progress">Work</a>
                     <a href="#about">About</a>
                 </div>
             </div>

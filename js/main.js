@@ -340,6 +340,91 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+function showPreview(id) {
+    var preview = document.getElementById(id);
+    if (preview.style.display === "none") {
+        preview.style.display = "block";
+    } else {
+        preview.style.display = "none";
+    }
+}
+// Open GDD Popup
+function openGDDPopup(url, title) {
+    document.getElementById('gddFrame').src = url;
+    document.getElementById('popupTitle').textContent = title + ' - GDD Preview';
+    document.getElementById('gddPopup').style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+// Close GDD Popup
+function closeGDDPopup() {
+    document.getElementById('gddPopup').style.display = 'none';
+    document.getElementById('gddFrame').src = ''; // Stop video/loading
+    document.body.style.overflow = 'auto'; // Restore scrolling
+}
+
+// Close popup when clicking outside the content
+window.onclick = function(event) {
+    var popup = document.getElementById('gddPopup');
+    if (event.target == popup) {
+        closeGDDPopup();
+    }
+}
+
+// Close popup with Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeGDDPopup();
+    }
+});
+
+// Video Popup Functions
+function openVideoPopup(videoSrc, title) {
+    const video = document.getElementById('popupVideo');
+    video.querySelector('source').src = videoSrc;
+    video.load(); // Reload with new source
+    
+    document.getElementById('videoPopupTitle').textContent = title || 'Video Preview';
+    document.getElementById('videoPopup').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+    
+    // Autoplay
+    video.play().catch(e => console.log('Autoplay prevented:', e));
+}
+
+function closeVideoPopup() {
+    const video = document.getElementById('popupVideo');
+    video.pause();
+    video.currentTime = 0;
+    
+    document.getElementById('videoPopup').style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+// Update the window.onclick to handle both popups
+window.onclick = function(event) {
+    var gddPopup = document.getElementById('gddPopup');
+    var videoPopup = document.getElementById('videoPopup');
+    
+    if (event.target == gddPopup) {
+        closeGDDPopup();
+    }
+    if (event.target == videoPopup) {
+        closeVideoPopup();
+    }
+}
+
+// Update the keydown event to handle both popups
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        if (document.getElementById('videoPopup').style.display === 'block') {
+            closeVideoPopup();
+        } else if (document.getElementById('gddPopup').style.display === 'block') {
+            closeGDDPopup();
+        }
+    }
+});
+
 // Console greeting (for fun)
 console.log('%c👋 Welcome to Filipe Silveira\'s Game Design Portfolio!', 'font-size: 16px; color: #6c5ce7; font-weight: bold;');
 console.log('%c🎮 Explore my games and prototypes!', 'font-size: 14px; color: #00b894;');

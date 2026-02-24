@@ -425,6 +425,37 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
+// YouTube Popup Function
+function openYouTubePopup(videoId, title) {
+    const popup = document.getElementById('videoPopup');
+    const popupBody = document.querySelector('.video-popup-body');
+    
+    // Create YouTube iframe
+    popupBody.innerHTML = `
+        <iframe 
+            width="100%" 
+            height="100%" 
+            src="https://www.youtube.com/embed/${videoId}?autoplay=1" 
+            title="${title}"
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    `;
+    
+    document.getElementById('videoPopupTitle').textContent = title || 'Video Preview';
+    document.getElementById('videoPopup').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+// Update close function to clear the iframe
+function closeVideoPopup() {
+    const popupBody = document.querySelector('.video-popup-body');
+    popupBody.innerHTML = ''; // Clear iframe to stop video
+    document.getElementById('videoPopup').style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
 // Console greeting (for fun)
 console.log('%c👋 Welcome to Filipe Silveira\'s Game Design Portfolio!', 'font-size: 16px; color: #6c5ce7; font-weight: bold;');
 console.log('%c🎮 Explore my games and prototypes!', 'font-size: 14px; color: #00b894;');

@@ -72,7 +72,7 @@
                     <div class="project-info">
                         <h3>Traffic Hell</h3>
                         <p>
-An arcadelike racing game with hard controls to master. The player enters levels where the objective is getting to work but the world is in chaos 
+An arcadelike racing game with a very steep skill floor and ceiling (soulslike mentality). The player enters levels where the objective is getting to work but the world is in chaos 
 so they have to dodge all the problems in the way (like zombies?). This is a simple but funny game that was a blast to make.
                         </p>
                         <div class="project-tags">
@@ -80,14 +80,35 @@ so they have to dodge all the problems in the way (like zombies?). This is a sim
                             <span>C#</span>
                             <span>Arcade</span>
                         </div>
-                        <div class="project-links">
-                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="unity">
+                    <div class="project-info">
+                        <h3>Inkquest</h3>
+                        <img 
+                            src="https://img.youtube.com/vi/ohr93Ad2KnM/maxresdefault.jpg" 
+                            alt="Game Engine Prototype Thumbnail"
+                            style="width:100%; height:100%; object-fit:cover; cursor:pointer;"
+                            onclick="openYouTubePopup('ohr93Ad2KnM', 'Game Engine Prototype')"
+                        >
+                        <!-- Play button overlay -->
+                        <div class="prototype-play-btn" onclick="openYouTubePopup('ohr93Ad2KnM', 'Game Engine Prototype')">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                        <p>
+A roguelite action mobile game where players need to progress by defeating monsters, however the only method is by drawing and casting spells.
+This drawing mechanic is brought by finger movements on the screen, effectively hindering the movement making the gameplay tactical.
+                        </p>
+                        <div class="project-tags">
+                            <span>Unity</span>
+                            <span>C#</span>
+                            <span>Roguelite</span>
                         </div>
                     </div>
                 </div>
-
-                </div>
             </div>
+        </div>
     </section>
 
     <!-- Game Prototypes Section - Vertical Layout -->
@@ -141,7 +162,8 @@ so they have to dodge all the problems in the way (like zombies?). This is a sim
                     <div class="prototype-meta">
                         <span><i class="fas fa-code"></i> Unity</span>
                     </div>
-                    <a href="https://ieeexplore.ieee.org/abstract/document/9419115" class="prototype-link">Read Article <i class="fas fa-arrow-right"></i></a>
+                    <a href="https://ieeexplore.ieee.org/abstract/document/9419115" 
+                    target="_blank" class="prototype-link">Read Article <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -217,40 +239,80 @@ evolution paths and mastering actions.
     <!-- Board Game Prototypes Section -->
     <section id="boardgames" class="boardgames">
         <div class="container">
-            <h2 class="section-title">Board Game Prototypes</h2>
+            <h2 class="section-title">Board Game</h2>
             <p class="section-subtitle">Tabletop games designed and playtested</p>
             
             <div class="boardgames-grid">
                 <div class="boardgame-card">
-                    <img src="images/boardgames/empire-builders.jpg" alt="Empire Builders">
+                    <img src="images/boardgames/empire-builders.jpg" alt="Critical Snaking">
                     <div class="boardgame-info">
-                        <h3>Empire Builders</h3>
-                        <p>A 4X strategy game for 2-4 players. Build your civilization through resource management and diplomacy.</p>
+                        <h3>Critical Snaking</h3>
+                        <p>
+Very easy game to match body parts and build a snake. The objective was to create a game without a win condition, in this game any snake is 
+acceptable and then players explain what their snake does and why it is the way it is.
+                        </p>
                         <div class="boardgame-details">
-                            <span><i class="fas fa-users"></i> 2-4 players</span>
-                            <span><i class="far fa-clock"></i> 60-90 min</span>
-                            <span><i class="fas fa-dice"></i> Playtested: 20+ sessions</span>
+                            <span><i class="fas fa-users"></i> 1-10 players</span>
+                            <span><i class="far fa-clock"></i> 5-10 min</span>
                         </div>
                         <div class="boardgame-links">
-                            <a href="#" class="btn-small">Rulebook PDF</a>
-                            <a href="#" class="btn-small">Print & Play</a>
+                            <a href="#" onclick="openGDDPopup('https://docs.google.com/document/d/e/2PACX-1vSgoNZWF-iGHk1XqlTNQKgnFem5da6HnLEzD8gJvexUPqEqVuoAuLGwrc5T_HxBVkmTwSz3chtHLRP5/pub?embedded=true', 'Critical Snaking'); return false;" class="wip-link">
+                                <i class="fas fa-eye"></i> Open Rules
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="boardgame-card">
+                    <img src="images/boardgames/empire-builders.jpg" alt="Fast Towers">
+                    <div class="boardgame-info">
+                        <h3>Fast Towers</h3>
+                        <p>
+Chill game for 2-5 players. Build your tower one piece at a time and become the fastest to reach a certain height to win.
+                        </p>
+                        <div class="boardgame-details">
+                            <span><i class="fas fa-users"></i> 2-5 players</span>
+                            <span><i class="far fa-clock"></i> 5-10 min</span>
+                        </div>
+                        <div class="boardgame-links">
+                            <a href="#" onclick="openGDDPopup('https://docs.google.com/document/d/e/2PACX-1vTQLU9xvpV2PiAxN21mEdkYbz6KA72NszA-CIeKsY4FwxGNBizLlubN4OD7sffqDHah4MVfuPghrq8h/pub?embedded=true', 'Fast Towers'); return false;" class="wip-link">
+                                <i class="fas fa-eye"></i> Open Rules
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="boardgame-card">
+                    <img src="images/boardgames/empire-builders.jpg" alt="Poseidon's Pursuit">
+                    <div class="boardgame-info">
+                        <h3>Poseidon's Pursuit</h3>
+                        <p>
+A game built 5 players, one takes the role of Poseidon and tries to sink the ship of the other 4 players. 
+Every player picks their move at the same time so they have to work together in order to survive without knowing what others will do. 
+                        </p>
+                        <div class="boardgame-details">
+                            <span><i class="fas fa-users"></i> 5 players</span>
+                            <span><i class="far fa-clock"></i> 20-30 min</span>
+                        </div>
+                        <div class="boardgame-links">
+                            <a href="#" onclick="openGDDPopup('https://docs.google.com/document/d/e/2PACX-1vReUijK1BSRYtQIhk58Xs0uEK0EfNOE5DeU0nbTr2q504335hgPpwgo5jD3aTvSxNI9Im4HnVbdxo4r/pub?embedded=true', 'Poseidon`s Pursuit'); return false;" class="wip-link">
+                                <i class="fas fa-eye"></i> Open Rules
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="boardgame-card">
-                    <img src="images/boardgames/necromancer-market.jpg" alt="Necromancer's Market">
+                    <img src="images/boardgames/dnd.jpg" alt="D&D Homebrew">
                     <div class="boardgame-info">
-                        <h3>Necromancer's Market</h3>
-                        <p>A bidding and bluffing game where players trade magical ingredients. Most unique auction mechanic I've designed.</p>
+                        <h3>D&D Homebrew</h3>
+                        <p>
+A huge list of homebrew changes I have made to play with friends. 
+Designing mechanics and content for this game is my favorite part, so I just ended up doing it more than I can actually playtest.
+                        </p>
                         <div class="boardgame-details">
-                            <span><i class="fas fa-users"></i> 3-5 players</span>
-                            <span><i class="far fa-clock"></i> 45 min</span>
-                            <span><i class="fas fa-dice"></i> Playtested: 15+ sessions</span>
                         </div>
                         <div class="boardgame-links">
-                            <a href="#" class="btn-small">Prototype Rules</a>
-                            <a href="#" class="btn-small">TTS Mod</a>
+                            <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQTj3q7rY0c_KGZc0Hd5WqzrpPKjzDf1EOveR35rQx4nohLeWAnqialDGckg5eGVEoxxaEAIIs-SWel/pubhtml"
+                             target="_blank" class="btn-small">Sheet with Content</a>
                         </div>
                     </div>
                 </div>
@@ -277,7 +339,8 @@ evolution paths and mastering actions.
                             <span>Non-euclidean physics</span>
                             <span>Designer, Programmer and Artist</span>
                         </div>
-                        <a href="https://v3.globalgamejam.org/2020/games/fixmeexe-8" class="timeline-link" target="_blank">Check Game <i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://v3.globalgamejam.org/2020/games/fixmeexe-8" 
+                        target="_blank" class="timeline-link" target="_blank">Check Game <i class="fas fa-external-link-alt"></i></a>
                     </div>
                     <div class="timeline-image">
                         <img src="images/gamejams/fix.png" alt="FIX_ME.exe">
@@ -293,7 +356,7 @@ evolution paths and mastering actions.
                 <div class="timeline-date">2025</div>
                 <div class="timeline-card reverse">
                     <div class="timeline-image">
-                        <img src="images/gamejams/cute-old-one.jpg" alt="The Cute Old One">
+                        <img src="images/gamejams/cat.jpg" alt="The Cute Old One">
                         <div class="image-overlay">
                             <span>Game Jam Plus 2025</span>
                         </div>
@@ -307,7 +370,8 @@ evolution paths and mastering actions.
                             <span>2D in 3D space</span>
                             <span>Designer and Programmer</span>
                         </div>
-                        <a href="#" class="timeline-link" target="_blank">Play Game <i class="fas fa-external-link-alt"></i></a>
+                        <a href="#" 
+                        class="timeline-link" target="_blank">Check Game<i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
             </div>
@@ -325,7 +389,8 @@ evolution paths and mastering actions.
                             <span>Horror</span>
                             <span>Solo Programmer</span>
                         </div>
-                        <a href="#" class="timeline-link" target="_blank">Check Game <i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://globalgamejam.org/games/2026/hold-your-breath-8"
+                        target="_blank" class="timeline-link" target="_blank">Check Game<i class="fas fa-external-link-alt"></i></a>
                     </div>
                     <div class="timeline-image">
                         <img src="images/gamejams/holdyourbreath.png" alt="Hold your breath">
@@ -339,7 +404,7 @@ evolution paths and mastering actions.
     </div>
 </section>
 
-    <!-- Master's Thesis Section -->
+   <!-- Master's Thesis Section -->
 <section id="thesis" class="thesis">
     <div class="container">
         <h2 class="section-title">Master's Thesis</h2>
@@ -361,32 +426,35 @@ CiF-Bannerlord aimed to study how an active social environment impacts player im
                 <div class="thesis-highlights">
                     <div class="highlight">
                         <i class="fas fa-file-pdf"></i>
-                        <a href="files/thesis.pdf">Read Full Thesis (PDF)</a>
+                        <a href="files/thesis.pdf" target="_blank">Read Full Thesis (PDF)</a>
                     </div>
                     <div class="highlight">
                         <i class="fas fa-download"></i>
-                        <a href="https://www.nexusmods.com/mountandblade2bannerlord/mods/3272?tab=description">NexusMods Page</a>
+                        <a href="https://www.nexusmods.com/mountandblade2bannerlord/mods/3272?tab=description" target="_blank">NexusMods Page</a>
                     </div>
                 </div>
             </div>
             
             <div class="thesis-media">
-                <div class="thesis-image-grid">
-                    <div class="thesis-image-card" style="max-width: 720px;">
-                        <img src="images/thesis/conversation.jpg" alt="NPC Conversation System" style="width: 100%; max-width: 720px; height: auto;">
+                <h3>Development Gallery</h3>
+                <div class="thesis-image-stack">
+                    <!-- Image 1 - Full width -->
+                    <div class="thesis-image-card-full">
+                        <img src="images/thesis/conversation.jpg" alt="NPC Conversation System">
                         <div class="image-caption">
                             <p>NPC conversation system - Characters now interact autonomously</p>
                         </div>
                     </div>
                     
-                    <div class="thesis-image-card" style="max-width: 720px;">
-                        <img src="images/thesis/TavernNoise.png" alt="Tavern Social Scene" style="width: 100%; max-width: 720px; height: auto;">
+                    <!-- Image 2 - Full width -->
+                    <div class="thesis-image-card-full">
+                        <img src="images/thesis/TavernNoise.png" alt="Tavern Social Scene">
                         <div class="image-caption">
                             <p>Tavern social scene - Dynamic NPC gatherings and interactions</p>
                         </div>
                     </div>
                 </div>
-                
+            </div>
         </div>
     </div>
 </section>
@@ -435,15 +503,19 @@ I have various hobbies and interests, all of them very unique, such as gaming, t
                     <div class="about-contact">
                         <h4>My socials</h4>
                         <div class="contact-links">
-                            <a href="https://www.linkedin.com/in/filipe-silveira-51b182174/"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                            <a href="https://github.com/Pantufass"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="https://itch.io/profile/pantufass"><i class="fab fa-itch-io"></i> itch.io</a>
-                            <a href="flipslv98@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+                            <a href="https://www.linkedin.com/in/filipe-silveira-51b182174/" target="_blank">
+                                <i class="fab fa-linkedin"></i> LinkedIn</a>
+                            <a href="https://github.com/Pantufass" target="_blank">
+                                <i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://itch.io/profile/pantufass" target="_blank">
+                                <i class="fab fa-itch-io"></i> itch.io</a>
+                            <a href="mailto:flipslv98@gmail.com" target="_blank"><i class="fas fa-envelope">
+                                </i> flipslv98@gmail.com</a>
                         </div>
                     </div>
                     
                     <div class="about-cv">
-                        <a href="Filipe_Silveira_CV.pdf" class="btn"><i class="fas fa-download"></i> Download CV</a>
+                        <a href="Filipe_Silveira_CV.pdf" target="_blank" class="btn"><i class="fas fa-download"></i> Download CV</a>
                     </div>
                 </div>
             </div>
